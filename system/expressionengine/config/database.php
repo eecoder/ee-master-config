@@ -13,7 +13,7 @@ $db['expressionengine']['autoinit'] = FALSE;
 $db['expressionengine']['char_set'] = 'utf8';
 $db['expressionengine']['dbcollat'] = 'utf8_general_ci';
 
-require $_SERVER['DOCUMENT_ROOT'] . '/../config/config.master.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/config/config.master.php';
 
 /* End of file database.php */
 /* Location: ./system/expressionengine/config/database.php */

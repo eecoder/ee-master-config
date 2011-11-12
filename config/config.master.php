@@ -16,7 +16,7 @@
  * All config files are stored in the ./config/ directory and this master file is "required"
  * in system/expressionengine/config/config.php and system/expressionengine/config/database.php
  * 
- * require $_SERVER['DOCUMENT_ROOT'] . '/../config/config.master.php';
+ * require $_SERVER['DOCUMENT_ROOT'] . '/config/config.master.php';
  * 
  * This config setup is a combination of inspiration from Matt Weinberg and Leevi Graham
  * @link       http://eeinsider.com/articles/multi-server-setup-for-ee-2/
@@ -129,7 +129,7 @@ if (isset($config))
 	 */
 	$env_config['save_tmpl_files']           = 'y';
 	// $env_config['save_tmpl_files']           = (ENV == 'prod') ? 'n' : 'y';
-	$env_config['tmpl_file_basepath']        = $base_path . '/../templates';
+	$env_config['tmpl_file_basepath']        = $base_path . '/templates';
 	$env_config['hidden_template_indicator'] = '_'; 
 
 
@@ -211,7 +211,7 @@ if (isset($config))
 	 * @see config/config.stage.php
 	 * @see config/config.prod.php
 	 */
-	require $_SERVER['DOCUMENT_ROOT'] . '/../config/config.' . ENV . '.php';
+	require $_SERVER['DOCUMENT_ROOT'] . '/config/config.' . ENV . '.php';
 
 
 
