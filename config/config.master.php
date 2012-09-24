@@ -105,6 +105,7 @@ if (isset($config))
 	$env_config['theme_folder_path']   = $base_path   . '/themes/';
 	$env_config['theme_folder_url']    = $base_url    . '/themes/';
 	$env_config['emoticon_path']       = $images_url  . '/smileys/';
+	$env_config['emoticon_url']        = $images_url  . '/smileys/';
 	$env_config['captcha_path']        = $images_path . '/captchas/';
 	$env_config['captcha_url']         = $images_url  . '/captchas/';
 	$env_config['avatar_path']         = $images_path . '/avatars/';
@@ -114,7 +115,27 @@ if (isset($config))
 	$env_config['sig_img_path']        = $images_path . '/signature_attachments/';
 	$env_config['sig_img_url']         = $images_url  . '/signature_attachments/';
 	$env_config['prv_msg_upload_path'] = $images_path . '/pm_attachments/';
+	// $env_config['third_party_path']    = $base_path . '/../third_party/';
 
+
+
+	/**
+	 * Custom upload directory paths
+	 * 
+	 * The array keys must match the ID from exp_upload_prefs
+	 */
+	// $env_config['upload_preferences'] = array(
+	//     1 => array(
+	//         'name'        => 'Default Uploads',
+	//         'server_path' => $images_path . '/uploads',
+	//         'url'         => $images_url  . '/uploads/'
+	//     ),
+	//     2 => array(
+	//         'name'        => 'Second Folder',
+	//         'server_path' => $images_path . '/another_one',
+	//         'url'         => $images_url  . '/another_one/'
+	//     )
+	// );
 
 
 	/**
@@ -194,7 +215,7 @@ if (isset($config))
 	 * Other system settings
 	 */
 	$env_config['new_version_check']        = 'n'; // no slowing my CP homepage down with this
-	$env_config['daylight_savings']         = date('I') ? 'y' : 'n'; // Autodetect DST
+	$env_config['daylight_savings']         = ((bool) date('I')) ? 'y' : 'n'; // Autodetect DST
 	$env_config['use_category_name']        = 'y';
 	$env_config['reserved_category_word']   = 'category';
 	$env_config['word_separator']           = 'dash'; // dash|underscore
